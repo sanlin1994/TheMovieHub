@@ -6,3 +6,7 @@ It uses MVVM + retrofit to access the data from Api.
 
 <img src = "https://github.com/sanlin1994/TheMovieHub/blob/master/Screenshot_2020-08-24-11-49-56-685_com.example.apitesting.jpg" height = 600 wight = 450>
 
+<img src = "https://github.com/sanlin1994/TheMovieHub/blob/master/Screenshot_2020-08-24-11-50-06-683_com.example.apitesting.jpg" height = 600 wight = 450>
+
+<img src = "https://github.com/sanlin1994/TheMovieHub/blob/master/Screenshot_2020-08-24-11-50-16-503_com.example.apitesting.jpg" height = 600 wight = 450>
+
