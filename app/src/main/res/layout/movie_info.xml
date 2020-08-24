@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimary"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_review_author"
+                android:id="@+id/mvie_info_more_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More reviews"
+                />
+
+            <ImageView
+                android:id="@+id/movie_info_banner"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rading_popularity_item"
+                android:layout_marginTop="160dp"
+                app:cardElevation="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="40dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/movie_info_rating"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_star_yellow_24dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="7.0"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/movie_info_popularity"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_whatshot_red_24dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="44.55"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/review_title"
+                android:id="@+id/linear_expand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <at.blogc.android.views.ExpandableTextView
+                    android:textSize="15sp"
+                    android:textColor="#808080"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/movie_info_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    app:animation_duration="750"/>
+
+                <!-- Optional parameter animation_duration: sets the duration of the expand animation -->
+
+                <ImageButton
+                    android:background="@color/colorWhite"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:padding="10dp"
+                    android:id="@+id/button_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/movie_info_title"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rading_popularity_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project power"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:id="@+id/movie_info_pg"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_title"
+                android:text="PG-13"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/movie_info_date"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/movie_info_pg"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_title"
+                android:text="7-8-2020"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/movie_info_duration"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/movie_info_date"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_title"
+                android:text="2h 33m"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/a"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_outline_border"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="action"
+                />
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/rounded_outline_border"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/a"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="si-fi"
+                />
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/rounded_outline_border"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/b"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="thriller"
+                />
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/rounded_outline_border"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/c"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="horror"
+                />
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/rounded_outline_border"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/d"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="suspense"
+                />
+
+
+            <TextView
+                android:id="@+id/movie_info_plot_summary"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a"
+                android:text="Plot summary"
+                />
+
+            <TextView
+                android:textSize="15sp"
+                android:text="A former soldier teams up with a cop to find the source behind a dangerous pill that provides temporary superpowers."
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_plot_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_info_overview"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:isScrollContainer="false"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/moview_info_cast_recycler"
+
+                />
+
+            <TextView
+                android:id="@+id/review_title"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moview_info_cast_recycler"
+                android:text="Review"
+                />
+
+
+            <TextView
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_expand"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_info_review_author"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mvie_info_more_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_info_releated"
+                />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_info_releated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

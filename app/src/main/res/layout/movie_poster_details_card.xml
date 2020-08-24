@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="110dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="10dp"
+            app:cardPreventCornerOverlap="false"
+            >
+            <ImageView
+                android:src="@drawable/image"
+                android:id="@+id/detailsPoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/scrim"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_movie_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsGenre"
+                android:text="Action|Adventure|Horror"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_hourglass_full_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsDuration"
+                android:text="1 hr 30 min"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_whatshot_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsPopularity"
+                android:text="70.86"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsRating"
+                android:text="7.8"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_event_note_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsDate"
+                android:text="19-5-2020"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:padding="1dp"
+                android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsRevenue"
+                android:text="20,000,000"
+                android:gravity="center"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
